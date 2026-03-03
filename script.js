@@ -557,6 +557,45 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
+    // Hero Background Image Slideshow (right-to-left)
+    const heroSlides = document.querySelectorAll('.hero-bg-slide');
+    if (heroSlides.length > 1) {
+        let currentHeroSlide = 0;
+        const slideInterval = 5000; // 5 seconds
+
+        function nextHeroSlide() {
+            const current = heroSlides[currentHeroSlide];
+            // Mark current as sliding out to the left
+            current.classList.remove('active');
+            current.classList.add('slide-out');
+
+            // Move to next slide
+            currentHeroSlide = (currentHeroSlide + 1) % heroSlides.length;
+            const next = heroSlides[currentHeroSlide];
+
+            // Reset position (place at right, off-screen)
+            next.classList.remove('slide-out');
+            // Force reflow so transition fires
+            next.style.transition = 'none';
+            next.style.transform = 'translateX(100%)';
+            next.style.opacity = '0';
+            void next.offsetWidth; // trigger reflow
+            next.style.transition = '';
+            next.style.transform = '';
+            next.style.opacity = '';
+
+            // Activate next slide (slides in from right)
+            next.classList.add('active');
+
+            // Clean up previous slide after transition
+            setTimeout(() => {
+                current.classList.remove('slide-out');
+            }, 1300);
+        }
+
+        setInterval(nextHeroSlide, slideInterval);
+    }
+
     // Scroll Animation for Legacy Cards
     const legacyCards = document.querySelectorAll('.legacy-card');
     function handleLegacyScroll() {

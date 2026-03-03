@@ -4,14 +4,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hackatly-24</title>
+  <title>Hackatly 4.0 — IEDC Thalassery</title>
   <script src="https://kit.fontawesome.com/854cd29b08.js" crossorigin="anonymous"></script>
 
   <link rel="stylesheet" href="./style.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&display=swap" />
   <link rel="website icon" href="assets/logo.png">
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="script.js" defer></script>
 </head>
@@ -22,7 +23,7 @@
       <div class="navbar-container">
         <div class="navbar-brand">
           <div class="logo">
-            <img src="assets/Group 128.png" alt="Hackatly Logo">
+            <a href="index.html"><img src="assets/MARK 4.png" alt="Hackatly Logo"></a>
           </div>
         </div>
 
@@ -32,19 +33,19 @@
 
         <nav class="navbar-menu">
           <div class="navbar-link">
-            <a href="#about" class="navlink">About</a>
+            <a href="index.html" class="navlink active">Home</a>
           </div>
           <div class="navbar-link">
-            <a href="#themes" class="navlink">Themes</a>
+            <a href="about.html" class="navlink">About</a>
           </div>
           <div class="navbar-link">
-            <a href="#legacy" class="navlink">Legacy</a>
+            <a href="themes.html" class="navlink">Themes</a>
           </div>
           <div class="navbar-link">
-            <a href="#faq" class="navlink">FAQ</a>
+            <a href="legacy.html" class="navlink">Legacy</a>
           </div>
           <div class="navbar-link">
-            <a href="#sponsorid" class="navlink">Sponsors</a>
+            <a href="faq.html" class="navlink">FAQ</a>
           </div>
           <div class="navbar-cta-mobile">
             <a href="https://iedctly.in/" class="primary-button-link">IEDC TLY</a>
@@ -58,30 +59,41 @@
         </div>
       </div>
     </header>
+
     <!-- HERO SECTION -->
     <section class="hero-section">
-      <div class="hero-shapes">
-        <div class="ellipse purple"></div>
-        <div class="ellipse green"></div>
+      <!-- Background Image Slider -->
+      <div class="hero-bg-slider">
+        <div class="hero-bg-slide active">
+          <img src="assets/image 1.JPG" alt="Hackatly Event 1">
+        </div>
+        <div class="hero-bg-slide">
+          <img src="assets/image 2.JPG" alt="Hackatly Event 2">
+        </div>
+        <div class="hero-bg-slide">
+          <img src="assets/image 3.JPG" alt="Hackatly Event 3">
+        </div>
       </div>
+      <!-- Dark Overlay -->
+      <div class="hero-overlay"></div>
 
       <div class="container hero-container">
-        <div class="hero-content fade_in">
-          <img src="assets/img.png" class="hack_title" alt="Hackatly 4.0">
-          <h3 class="subtitle">
+        <div class="hero-content">
+          <h1 class="hero-title-anim">
+            <span class="hero-intro-line">Introducing,</span>
+            <span class="hero-main-line">Hackatly <span class="accent">-4.0</span></span>
+          </h1>
+          <h3 class="subtitle hero-subtitle-anim">
             A National Level Hackathon hosted by IEDC at<br>
             College of Engineering Thalassery
           </h3>
-          <button class="primary-button" onclick="window.location.href='#themes'">
+          <button class="primary-button hero-cta-anim" onclick="window.location.href='themes.html'">
             Explore Themes
           </button>
         </div>
-
-        <div class="hero-image fade_in">
-          <img src="assets/Innovation-amico-1.png" alt="Innovation Illustration">
-        </div>
       </div>
     </section>
+
     <!-- INTRO SECTION -->
     <section class="section container text-center">
       <div class="card-base fade_in lazyload" style="max-width: 900px; margin: 0 auto;">
@@ -92,12 +104,11 @@
           year's event.
         </p>
         <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-          <button class="secondary-button" onclick="window.location.href='#themes'">Learn More</button>
+          <button class="secondary-button" onclick="window.location.href='themes.html'">Learn More</button>
           <button class="primary-button" style="opacity: 0.7; cursor: not-allowed;">Registration Over</button>
         </div>
       </div>
     </section>
-
 
     <!-- PHASES SECTION -->
     <section class="section phases-section fade_in lazyload">
@@ -136,440 +147,13 @@
       </div>
     </section>
 
-    <!--  <section class="phase-one" id="phase-one-part">
-        <div class="title">
-          <h1 class="themes-for-hackatly-24">Phase One Participants</h1>
-        </div>
-        <div class="results-scroll" id="participantsContainer">
-          <ul id="participantsList">
-            <!-- Will be populated by JavaScript 
-          </ul>
-        </div>
-        <div class="scroll-buttons">
-          <button class="scroll-btn" onclick="scrollParticipants('up')">↑ Scroll Up</button>
-          <button class="scroll-btn" onclick="scrollParticipants('down')">↓ Scroll Down</button>
-        </div>
-        <button class="view-all-btn" onclick="openParticipantsModal()">View Complete List</button>
-        
-         Modal/Popup 
-        <div id="participantsModal" class="modal">
-          <div class="modal-content">
-            <span class="close-btn" onclick="closeParticipantsModal()">&times;</span>
-            <h2>Complete Participants List</h2>
-            <div class="modal-list">
-              <ul id="completeParticipantsList">
-                 Will be populated by JavaScript 
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-   <section class="phase-one">
-     <div class="title">
-       <h1 class="themes-for-hackatly-24">Phase One Winners</h1>
-     </div>
-     <div class="results-scroll" id="resultsContainer">
-       <ul id="resultsList">
-       </ul>
-     </div>
-     <div class="scroll-buttons">
-       <button class="scroll-btn" onclick="scrollResults('up')">↑ Scroll Up</button>
-       <button class="scroll-btn" onclick="scrollResults('down')">↓ Scroll Down</button>
-     </div>
-     <button class="view-all-btn" onclick="openModal()">View Complete List</button>
-     
-      Modal/Popup 
-     <div id="listModal" class="modal">
-       <div class="modal-content">
-         <span class="close-btn" onclick="closeModal()">&times;</span>
-         <h2>Complete Team List</h2>
-         <div class="modal-list">
-           <ul id="completeList">
-             <!-- Will be populated by JavaScript 
-           </ul>
-         </div>
-       </div>
-     </div>
-   </section> -->
-
-
-    <!-- THEMES SECTION -->
-    <section class="section themes-section fade_in lazyload" id="themes">
-      <div class="container">
-        <h2 class="section-title">Themes for Hackatly-24</h2>
-
-        <div class="themes-grid">
-          <!-- Robotics -->
-          <div class="theme-card">
-            <div class="theme-image">
-              <img src="./assets/robotics.png" alt="Robotics">
-            </div>
-            <div class="theme-content">
-              <h3>Robotics</h3>
-              <p>Push boundaries with intelligent, versatile machines.</p>
-              <p style="font-size: 0.85rem; opacity: 0.8;">Avg. Innovation in interaction, AI, and automation.</p>
-            </div>
-          </div>
-
-          <!-- Tourism -->
-          <div class="theme-card">
-            <div class="theme-image">
-              <img src="./assets/tourism2.jpeg" alt="Tourism">
-            </div>
-            <div class="theme-content">
-              <h3>Tourism</h3>
-              <p>Transform travel with smart destinations & immersive experiences.</p>
-            </div>
-          </div>
-
-          <!-- Smart Vehicle -->
-          <div class="theme-card">
-            <div class="theme-image">
-              <img src="./assets/vehicle.png" alt="Smart Vehicle">
-            </div>
-            <div class="theme-content">
-              <h3>Smart Vehicle</h3>
-              <p>Enhance safety, efficiency, and connectivity in transportation.</p>
-            </div>
-          </div>
-
-          <!-- Energy -->
-          <div class="theme-card">
-            <div class="theme-image">
-              <img src="./assets/greentech.png" alt="Energy">
-            </div>
-            <div class="theme-content">
-              <h3>Energy and Environment</h3>
-              <p>Sustainable solutions for resource conservation & waste management.</p>
-            </div>
-          </div>
-
-          <!-- Fitness -->
-          <div class="theme-card">
-            <div class="theme-image">
-              <img src="./assets/fitness.jpg" alt="Fitness">
-            </div>
-            <div class="theme-content">
-              <h3>Fitness</h3>
-              <p>Innovate health tech to encourage physical activity & well-being.</p>
-            </div>
-          </div>
-
-          <!-- Med-Tech -->
-          <div class="theme-card">
-            <div class="theme-image">
-              <img src="./assets/medtech.jpg" alt="Med-Tech">
-            </div>
-            <div class="theme-content">
-              <h3>Med-Tech</h3>
-              <p>Improve patient care with advanced diagnostic & treatment tools.</p>
-            </div>
-          </div>
-
-          <!-- Agriculture -->
-          <div class="theme-card">
-            <div class="theme-image">
-              <img src="./assets/agriculture.jpg" alt="Agriculture">
-            </div>
-            <div class="theme-content">
-              <h3>Agriculture</h3>
-              <p>Revolutionize farming for food security & precision management.</p>
-            </div>
-          </div>
-
-          <!-- Cybersecurity -->
-          <div class="theme-card">
-            <div class="theme-image">
-              <img src="./assets/cybersecurity.jpg" alt="Cybersecurity">
-            </div>
-            <div class="theme-content">
-              <h3>Cybersecurity</h3>
-              <p>Safeguard digital infrastructure against emerging threats.</p>
-            </div>
-          </div>
-
-          <!-- Disaster Management -->
-          <div class="theme-card">
-            <div class="theme-image">
-              <img src="./assets/disaster.jpg" alt="Disaster Management">
-            </div>
-            <div class="theme-content">
-              <h3>Disaster Management</h3>
-              <p>Prepare, respond, and recover effectively from emergencies.</p>
-            </div>
-          </div>
-
-          <!-- Education -->
-          <div class="theme-card">
-            <div class="theme-image">
-              <img src="./assets/education.jpg" alt="Education">
-            </div>
-            <div class="theme-content">
-              <h3>Education</h3>
-              <p>Enhance learning experiences with accessible tech-driven solutions.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Add this somewhere in your HTML, preferably right after your themes container -->
-    <div id="popupModal" class="modal" style="display: none;">
-      <div class="modal-content">
-        <span class="close-button">&times;</span>
-        <!-- Content will be dynamically inserted here by JavaScript -->
-      </div>
-    </div>
-
-
-    <!-- ABOUT US SECTION -->
-    <section class="section about-section fade_in lazyload" id="about">
-      <div class="container" style="max-width: 900px;">
-        <div class="text-center">
-          <h2 class="section-title">About Us</h2>
-          <div class="card-base" style="text-align: left; position: relative; overflow: hidden;">
-            <!-- Decorative background elements -->
-            <div
-              style="position: absolute; top: 0; right: 0; width: 150px; height: 150px; background: var(--primary); opacity: 0.1; filter: blur(50px); border-radius: 50%;">
-            </div>
-
-            <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.8;">
-              A flagship initiative of Kerala Startup Mission to promote innovation and entrepreneurship among the
-              student and academic fraternity in the educational institutions in the State of Kerala. It is considered
-              an umbrella program that would play an instrumental role in fostering innovation culture in Academic
-              institutions.
-            </p>
-            <br>
-            <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.8;">
-              IEDC CETLY, formed in the year 2015, is a centre supported by the Kerala Startup mission encouraging
-              students to think creatively and generate innovative ideas. The centre aims to nurture a mindset to think
-              creatively and innovate to develop useful products. IEDC CE-TLY serves as a helping hand among the
-              students within the campus to figure out the best ideas and provide them with all the requirements,
-              thereby resulting in finding the best upcoming entrepreneurs.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- LEGACY SECTION -->
-    <section class="section legacy-section fade_in lazyload" id="legacy">
-      <div class="container">
-        <h2 class="section-title text-center">Our Legacy</h2>
-        <p class="text-center" style="max-width: 800px; margin: 0 auto 3rem; color: var(--text-muted);">
-          IEDC unit of Thalassery Engineering college has been conducting hackatly for past few years. We have been
-          successful in encouraging great ideas from great minds.
-        </p>
-
-        <div class="legacy-grid">
-
-          <!-- Legacy of IEDC -->
-          <div class="legacy-card">
-            <div class="legacy-images">
-              <img class="mySlideslegacy" src="assets/legacy1.jpg" alt="Legacy Image 1">
-              <img class="mySlideslegacy" src="assets/legacy2.jpg" alt="Legacy Image 2" style="display:none;">
-              <img class="mySlideslegacy" src="assets/legacy3.jpg" alt="Legacy Image 3" style="display:none;">
-            </div>
-            <h3 style="margin-bottom: 1rem;">Legacy of IEDC</h3>
-            <div style="font-size: 0.9rem; color: var(--text-muted);">
-              <p><strong>Inception (2022):</strong> First hackathon launched by IEDC Thalassery.</p>
-              <br>
-              <p><strong>Growth (2023):</strong> Expanded participation and complex challenges.</p>
-              <br>
-              <p><strong>Hackatly 24 (2024):</strong> Biggest edition yet with broader themes.</p>
-            </div>
-          </div>
-
-          <!-- Our History -->
-          <div class="legacy-card">
-            <div class="legacy-images">
-              <img class="mySlides1" src="assets/previmg1.jpg" alt="History Image 1">
-              <img class="mySlides1" src="assets/previmg2.jpg" alt="History Image 2" style="display:none;">
-              <img class="mySlides1" src="assets/previmg3.jpg" alt="History Image 3" style="display:none;">
-              <img class="mySlides1" src="assets/previmg4.jpg" alt="History Image 4" style="display:none;">
-              <img class="mySlides1" src="assets/previmg5.jpg" alt="History Image 5" style="display:none;">
-              <img class="mySlides1" src="assets/previmg6.jpg" alt="History Image 6" style="display:none;">
-            </div>
-            <h3 style="margin-bottom: 1rem;">Our History</h3>
-            <p style="font-size: 0.9rem; color: var(--text-muted);">
-              Since 2022, IEDC Thalassery has successfully hosted annual hackathons. Each year growing in scale,
-              attracting more participants and industry support.
-            </p>
-          </div>
-
-          <!-- Previous Hackathon -->
-          <div class="legacy-card">
-            <div class="legacy-images">
-              <img class="mySlides" src="assets/image 1.JPG" alt="Prev Hackathon 1">
-              <img class="mySlides" src="assets/image 2.JPG" alt="Prev Hackathon 2" style="display:none;">
-              <img class="mySlides" src="assets/image 3.JPG" alt="Prev Hackathon 3" style="display:none;">
-            </div>
-            <h3 style="margin-bottom: 1rem;">Previous Hackathon</h3>
-            <div style="font-size: 0.9rem; color: var(--text-muted);">
-              <p>"Hackatly 23" - Theme "Innovation for Easy Life".</p>
-              <br>
-              <p><strong>Winners:</strong></p>
-              <ul style="list-style: disc; padding-left: 1rem;">
-                <li>Vrishti (CET)</li>
-                <li>Mark-10 (MEC)</li>
-                <li>Uncertainty (AJCE)</li>
-              </ul>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-    <!--
-       <section class="sponsorSection" id="sponsorid">
-        <div class="sponsors">
-        <div class="sponsorTitleSection">
-          <div class="sponsorTitle"><p>Sponsors</p></div>
-        </div>
-        <div class="spontorlistContainer">
-          <div class="sponsorlist">
-            <div class="sponsor1"></div>
-            <div class="sponsor2"></div>
-            <div class="sponsor3"></div>
-            <div class="sponsor4"></div>
-          </div>
-        </div>
-      </div>
-       </section>
-       -->
-    <!--sponser section End-->
-
-    <!--media section-->
-    <!--
-        <section class="sponsorSection" id="sponsorid">
-          <div class="sponsors">
-          <div class="mediaTitleSection">
-            <div class="sponsorTitle"><p>Media Partners</p></div>
-          </div>
-          <div class="spontorlistContainer">
-            <div class="sponsorlist">
-              <div class="sponsor1"></div>
-              <div class="sponsor2"></div>
-              <div class="sponsor3"></div>
-              <div class="sponsor4"></div>
-              <div class="sponsor5"></div>
-              <div class="sponsor6"></div>
-              <div class="sponsor7"></div>
-            </div>
-          </div>
-        </div>
-         </section>
-        -->
-    <!--media section End-->
-    <!-- FAQ SECTION -->
-    <section class="section faq-section fade_in lazyload" id="faq">
-      <div class="container faq-container">
-        <h2 class="section-title text-center">F.A.Qs</h2>
-
-        <!-- FAQ 1 -->
-        <div class="faq-item">
-          <div class="faq-question">
-            <h3>1. Where is it?</h3>
-            <i class="fas fa-chevron-down faq-icon"></i>
-          </div>
-          <div class="faq-answer">
-            <p>Hackatly will be taking place at College of Engineering Thalassery, Eranholi P.O., Thalassery-670107.</p>
-          </div>
-        </div>
-
-        <!-- FAQ 2 -->
-        <div class="faq-item">
-          <div class="faq-question">
-            <h3>2. Who can attend?</h3>
-            <i class="fas fa-chevron-down faq-icon"></i>
-          </div>
-          <div class="faq-answer">
-            <p>Be a beginner or a pro, anyone of the age 18 or above can attend Hackatly. All are welcomed and
-              encouraged to join us.</p>
-          </div>
-        </div>
-
-        <!-- FAQ 3 -->
-        <div class="faq-item">
-          <div class="faq-question">
-            <h3>3. How much will it cost?</h3>
-            <i class="fas fa-chevron-down faq-icon"></i>
-          </div>
-          <div class="faq-answer">
-            <p>Even though most of the resources will be free, there is a registration fee of 500 for each participant
-              entering the third phase.</p>
-          </div>
-        </div>
-
-        <!-- FAQ 4 -->
-        <div class="faq-item">
-          <div class="faq-question">
-            <h3>4. Do I need to know coding?</h3>
-            <i class="fas fa-chevron-down faq-icon"></i>
-          </div>
-          <div class="faq-answer">
-            <p>Coding experience is not at all necessary. Non-STEM majors, first-time hackers, and beginners are
-              welcomed and encouraged to join us. We will have mentors to guide you.</p>
-          </div>
-        </div>
-
-        <!-- FAQ 5 -->
-        <div class="faq-item">
-          <div class="faq-question">
-            <h3>5. When will the registration close?</h3>
-            <i class="fas fa-chevron-down faq-icon"></i>
-          </div>
-          <div class="faq-answer">
-            <p>The registration begins from 19 October 2024 and will be closed by 28 October 2024. So hurry up!!!!!</p>
-          </div>
-        </div>
-
-        <!-- FAQ 6 -->
-        <div class="faq-item">
-          <div class="faq-question">
-            <h3>6. What should I bring?</h3>
-            <i class="fas fa-chevron-down faq-icon"></i>
-          </div>
-          <div class="faq-answer">
-            <p>Bring your college ID card, laptop, and all other necessary items you need to use.</p>
-          </div>
-        </div>
-
-        <!-- FAQ 7 -->
-        <div class="faq-item">
-          <div class="faq-question">
-            <h3>7. Do I need a team?</h3>
-            <i class="fas fa-chevron-down faq-icon"></i>
-          </div>
-          <div class="faq-answer">
-            <p>If you are planning to compete for the prize, you may be in a team of 2-4 people. The members of your
-              team can also be from different colleges.</p>
-          </div>
-        </div>
-
-        <!-- FAQ 8 -->
-        <div class="faq-item">
-          <div class="faq-question">
-            <h3>8. How do I register?</h3>
-            <i class="fas fa-chevron-down faq-icon"></i>
-          </div>
-          <div class="faq-answer">
-            <p>Click on the registration button, fill out the form (make sure that all the details are entered
-              correctly) and we will get you ready to hack!</p>
-          </div>
-        </div>
-
-      </div>
-    </section>
     <!-- FOOTER -->
-    <footer class="footer fade_in lazyload">
+    <footer class="footer">
       <div class="container footer-container">
-
-        <!-- Column 1: Brand & Email -->
         <div class="footer-col">
           <div class="navbar-brand" style="padding-left: 0;">
             <div class="logo">
-              <img src="assets/Group 128.png" alt="IEDC Logo" style="height: 50px; width: auto;">
+              <img src="assets/MARK 4.png" alt="IEDC Logo" style="height: 50px; width: auto;">
             </div>
             <span style="font-weight: 700; font-size: 1.2rem; margin-left: 10px;">IEDC TLY</span>
           </div>
@@ -579,27 +163,22 @@
           <a href="mailto:iedc@cethalassery.ac.in" class="primary-button-link"
             style="margin-top: 1rem; display: inline-block;">Email Us</a>
         </div>
-
-        <!-- Column 2: Quick Links -->
         <div class="footer-col">
           <h3>Quick Links</h3>
           <ul class="footer-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#themes">Themes</a></li>
-            <li><a href="#legacy">Legacy</a></li>
-            <li><a href="#faq">FAQ</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="themes.html">Themes</a></li>
+            <li><a href="legacy.html">Legacy</a></li>
+            <li><a href="faq.html">FAQ</a></li>
           </ul>
         </div>
-
-        <!-- Column 3: Contact Info -->
         <div class="footer-col">
           <h3>Contact Us</h3>
           <div style="color: var(--text-muted); margin-bottom: 1rem;">
             <p><strong>Sidharth (CEO):</strong> 9074961060</p>
             <p><strong>Adithya (CMO):</strong> 8590801366</p>
           </div>
-
           <h3>Location</h3>
           <p style="color: var(--text-muted); margin-bottom: 0.5rem;">College of Engineering Thalassery</p>
           <a href="https://www.google.com/maps/place/College+of+Engineering+Thalassery/@11.7827642,75.5127451,17z"
@@ -609,8 +188,6 @@
             View on Map
           </a>
         </div>
-
-        <!-- Column 4: Socials & Reg -->
         <div class="footer-col">
           <h3>Follow Us</h3>
           <div class="social-links" style="display: flex; gap: 1rem; margin-bottom: 2rem;">
@@ -621,29 +198,20 @@
             <a href="https://www.facebook.com/iedctlylive/" target="_blank"><img src="./assets/social link (4).png"
                 alt="Facebook" style="height: 30px;"></a>
             <a href="https://x.com/Iedctly" target="_blank"><img src="./assets/social link (5).png" alt="X"
-                style="height: 30px; filter: invert(1);"></a>
-          </div>
-
-          <div>
-            <button class="primary-button"
-              style="opacity: 0.7; cursor: not-allowed; padding: 0.5rem 1.5rem; font-size: 0.9rem;">
-              Registration Closed
-            </button>
+                style="height: 30px;"></a>
           </div>
         </div>
-
       </div>
-
       <div
-        style="text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 2rem; color: var(--text-muted); font-size: 0.9rem;">
-        &copy; 2024 IEDC TLY. All rights reserved.
+        style="text-align: center; padding-top: 2rem; border-top: 1px solid var(--border); margin-top: 2rem; color: var(--text-muted); font-size: 0.9rem;">
+        &copy; 2026 IEDC TLY. All rights reserved.
       </div>
     </footer>
-    <!-- Scripts handled in script.js -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
+  </div>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>
